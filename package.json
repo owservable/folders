@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -17,7 +17,7 @@
 		"url": "git+https://github.com/owservable/folders.git"
 	},
 	"scripts": {
-		"all": "yarn & tsc & yarn clean & yarn build & yarn test & yarn test_qube & yarn docs",
+		"all": "pnpm i & tsc & pnpm clean & pnpm build & pnpm test & pnpm test_qube & pnpm docs",
 		"build": "del /S /Q lib\\* && tsc",
 		"build:watch": "tsc --watch",
 		"lint": "tslint -p tsconfig.json",
@@ -28,9 +28,10 @@
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
 		"sonar": "sonarjs -e .sonarlint/**,node_modules/**,coverage/**,.nyc_output/**",
 		"test_qube": "nyc --reporter=lcov mocha -R @danmasta/mocha-sonar -r ts-node/register test/**/*.spec.ts",
-		"up": "yarn upgrade-interactive",
-		"latest": "yarn upgrade-interactive --latest",
-		"srctree": "dir src /s /b > srctree.txt"
+		"up": "pnpm upgrade-interactive",
+		"latest": "pnpm upgrade-interactive --latest",
+		"srctree": "dir src /s /b > srctree.txt",
+		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
 		"@types/lodash": "^4.14.182",
