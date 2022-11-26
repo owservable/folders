@@ -2,6 +2,7 @@
 
 # folders
 
-- addFilesFromFolder
-- listSubfoldersByName
-- listSubfoldersFilesByFolderName
+- functions
+	- addFilesFromFolder
+	- listSubfoldersByName
+	- listSubfoldersFilesByFolderName
