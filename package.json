@@ -29,6 +29,7 @@
 		"sonar": "sonarjs -e .sonarlint/**,node_modules/**,coverage/**,.nyc_output/**",
 		"test_qube": "nyc --reporter=lcov mocha -R @danmasta/mocha-sonar -r ts-node/register test/**/*.spec.ts",
 		"up": "pnpm upgrade-interactive",
+		"l": "pnpm latest",
 		"latest": "pnpm upgrade-interactive --latest",
 		"srctree": "dir src /s /b > srctree.txt",
 		"preinstall": "npx only-allow pnpm"
