@@ -2,5 +2,6 @@
 
 # folders
 
-listSubfoldersByName
-listSubfoldersFilesByFolderName
+- addFilesFromFolder
+- listSubfoldersByName
+- listSubfoldersFilesByFolderName

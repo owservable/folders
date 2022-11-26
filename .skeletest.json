@@ -7,6 +7,5 @@
 	"ignoreSrcFiles": [
 	],
 	"ignoreTestFiles": [
-		"test/mongodb/functions/_dummy.ts"
 	]
 }
