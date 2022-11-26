@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -28,9 +28,9 @@
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
 		"sonar": "sonarjs -e .sonarlint/**,node_modules/**,coverage/**,.nyc_output/**",
 		"test_qube": "nyc --reporter=lcov mocha -R @danmasta/mocha-sonar -r ts-node/register test/**/*.spec.ts",
-		"up": "pnpm upgrade-interactive",
+		"up": "pnpm up -i",
+		"latest": "pnpm up -i -L",
 		"l": "pnpm latest",
-		"latest": "pnpm upgrade-interactive --latest",
 		"srctree": "dir src /s /b > srctree.txt",
 		"preinstall": "npx only-allow pnpm"
 	},
@@ -42,7 +42,7 @@
 	"devDependencies": {
 		"@danmasta/mocha-sonar": "^1.0.1",
 		"@types/chai": "^4.3.1",
-		"@types/mocha": "^9.1.1",
+		"@types/mocha": "^10.0.0",
 		"chai": "^4.3.6",
 		"coveralls": "^3.0.9",
 		"mocha": "^10.0.0",
