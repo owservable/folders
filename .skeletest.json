@@ -1,0 +1,12 @@
+{
+	"srcFolderName": "src",
+	"filesExtension": "ts",
+	"testFolderName": "test",
+	"testFileExtensionPrefix": "spec",
+	"considerVueFiles": true,
+	"ignoreSrcFiles": [
+	],
+	"ignoreTestFiles": [
+		"test/mongodb/functions/_dummy.ts"
+	]
+}
