@@ -2,8 +2,8 @@
 
 import {each} from 'lodash';
 
-import addFilesFromFolder from '@/functions/add.files.from.folder';
-import listSubfoldersByName from '@/functions/list.subfolders.by.name';
+import addFilesFromFolder from './add.files.from.folder';
+import listSubfoldersByName from './list.subfolders.by.name';
 
 const listSubfoldersFilesByFolderName = (root: string, name: string): string[] => {
 	let files: string[] = [];
