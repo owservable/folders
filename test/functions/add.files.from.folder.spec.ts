@@ -15,7 +15,8 @@ describe('add.files.from.folder tests', () => {
 
 		expect(files).to.deep.equal([
 			'test\\_folder\\b\\unspecial\\another.txt', //
-			'test\\_folder\\b\\unspecial\\some.txt'
+			'test\\_folder\\b\\unspecial\\some.txt',
+			'test\\_folder\\b\\unspecial\\deep\\more.txt'
 		]);
 	});
 });
