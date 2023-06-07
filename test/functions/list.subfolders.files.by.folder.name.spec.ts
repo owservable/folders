@@ -9,4 +9,6 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 		expect(listSubfoldersFilesByFolderName).to.exist;
 		expect(listSubfoldersFilesByFolderName).to.be.a('function');
 	});
+
+	it('should be implemented');
 });

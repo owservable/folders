@@ -9,4 +9,6 @@ describe('add.files.from.folder tests', () => {
 		expect(addFilesFromFolder).to.exist;
 		expect(addFilesFromFolder).to.be.a('function');
 	});
+
+	it('should be implemented');
 });
