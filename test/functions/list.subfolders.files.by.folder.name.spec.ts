@@ -11,8 +11,9 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 	});
 
 	it('listSubfoldersFilesByFolderName works', () => {
-		const subfolders = listSubfoldersFilesByFolderName('test', 'special');
-		expect(subfolders).to.deep.equal([
+		const subfoldersFiles = listSubfoldersFilesByFolderName('test', 'special');
+
+		expect(subfoldersFiles).to.deep.equal([
 			'test\\_folder\\a\\special\\a.txt', //
 			'test\\_folder\\c\\special\\c.txt'
 		]);

@@ -10,5 +10,12 @@ describe('list.subfolders.by.name tests', () => {
 		expect(listSubfoldersByName).to.be.a('function');
 	});
 
-	it('should be implemented');
+	it('listSubfoldersByName works', () => {
+		const subfolders = listSubfoldersByName('test', 'special');
+
+		expect(subfolders).to.deep.equal([
+			'test\\_folder\\a\\special', //
+			'test\\_folder\\c\\special'
+		]);
+	});
 });
