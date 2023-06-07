@@ -1,3 +1,12 @@
 'use strict';
 
-describe('list.subfolders.by.name tests', () => it('should be implemented'));
+import {expect} from 'chai';
+
+import listSubfoldersByName from '../../src/functions/list.subfolders.by.name';
+
+describe('list.subfolders.by.name tests', () => {
+	it('fixUrl exists', () => {
+		expect(listSubfoldersByName).to.exist;
+		expect(listSubfoldersByName).to.be.a('function');
+	});
+});
