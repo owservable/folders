@@ -10,5 +10,12 @@ describe('add.files.from.folder tests', () => {
 		expect(addFilesFromFolder).to.be.a('function');
 	});
 
-	it('should be implemented');
+	it('addFilesFromFolder works', () => {
+		const files = addFilesFromFolder([], 'test/_folder/b/unspecial');
+
+		expect(files).to.deep.equal([
+			'test\\_folder\\b\\unspecial\\another.txt', //
+			'test\\_folder\\b\\unspecial\\some.txt'
+		]);
+	});
 });
