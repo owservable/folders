@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
     <file path="test\functions\add.files.from.folder.spec.ts">
-        <testCase name="add.files.from.folder tests fixUrl exists" duration="0"/>
+        <testCase name="add.files.from.folder tests addFilesFromFolder exists" duration="1"/>
         <testCase name="add.files.from.folder tests should be implemented" duration="0">
             <skipped message="skipped">skipped</skipped>
         </testCase>
     </file>
     <file path="test\functions\list.subfolders.by.name.spec.ts">
-        <testCase name="list.subfolders.by.name tests fixUrl exists" duration="1"/>
+        <testCase name="list.subfolders.by.name tests listSubfoldersByName exists" duration="0"/>
         <testCase name="list.subfolders.by.name tests should be implemented" duration="0">
             <skipped message="skipped">skipped</skipped>
         </testCase>
     </file>
     <file path="test\functions\list.subfolders.files.by.folder.name.spec.ts">
-        <testCase name="list.subfolders.files.by.folder.name tests fixUrl exists" duration="0"/>
-        <testCase name="list.subfolders.files.by.folder.name tests should be implemented" duration="0">
-            <skipped message="skipped">skipped</skipped>
-        </testCase>
+        <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName exists" duration="0"/>
+        <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName works" duration="4"/>
     </file>
     <file path="test\owservable.folders.spec.ts">
         <testCase name="owservable.folders tests OwservableFolders" duration="0"/>
