@@ -2,6 +2,14 @@
 
 # @owservable/folders
 
+## TypeDoc Documentation
+
+See the <a href="https://owservable.github.io/folders/docs/" target="_blank">TypeDoc documentation</a>.
+
+## Test Coverage
+
+See the <a href="https://owservable.github.io/folders/coverage/" target="_blank">Test coverage</a>.
+
 - functions
 	- addFilesFromFolder
 	- listSubfoldersByName
