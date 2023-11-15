@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.8",
+	"version": "0.1.81",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -47,7 +47,7 @@
 		"coveralls": "^3.0.9",
 		"mocha": "^10.2.0",
 		"nyc": "^15.1.0",
-		"prettier": "^3.0.3",
+		"prettier": "^3.1.0",
 		"skeletest": "^0.5.0",
 		"sonarjs": "^1.0.0",
 		"source-map-support": "^0.5.21",
