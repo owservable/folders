@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.86",
+	"version": "0.1.87",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -17,7 +17,7 @@
 		"url": "git+https://github.com/owservable/folders.git"
 	},
 	"scripts": {
-		"all": "pnpm i & tsc & pnpm clean & pnpm build & pnpm test & pnpm test_qube & pnpm docs & skeletest & strictr",
+		"all": "pnpm i & pnpm dedupe & tsc & pnpm clean & pnpm build & pnpm test & pnpm test_qube & pnpm docs & skeletest & strictr",
 		"build": "del /S /Q lib\\* && tsc",
 		"build:watch": "tsc --watch",
 		"lint": "tslint -p tsconfig.json",
