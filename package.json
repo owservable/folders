@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.92",
+	"version": "0.1.93",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -35,13 +35,13 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"@types/lodash": "^4.17.0",
-		"@types/node": "^20.12.7",
+		"@types/lodash": "^4.17.4",
+		"@types/node": "^20.12.13",
 		"lodash": "^4.17.20"
 	},
 	"devDependencies": {
 		"@danmasta/mocha-sonar": "^1.1.0",
-		"@types/chai": "^4.3.14",
+		"@types/chai": "^4.3.16",
 		"@types/mocha": "^10.0.6",
 		"chai": "4.4.0",
 		"coveralls": "^3.0.9",
