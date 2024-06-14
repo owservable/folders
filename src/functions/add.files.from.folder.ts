@@ -6,15 +6,15 @@ import * as path from 'path';
 import {each, filter} from 'lodash';
 
 const addFilesFromFolder = (files: string[], folder: string): string[] => {
-	const subfolderNames = fs.readdirSync(folder);
+	const subfolderNames: string[] = fs.readdirSync(folder);
 
-	const subFiles = filter(subfolderNames, (name) => !fs.lstatSync(path.join(folder, name)).isDirectory());
-	each(subFiles, (file: string) => {
+	const subFiles: string[] = filter(subfolderNames, (name: string) => !fs.lstatSync(path.join(folder, name)).isDirectory());
+	each(subFiles, (file: string): void => {
 		files.push(path.join(folder, file));
 	});
 
-	const subFolders = filter(subfolderNames, (name: string) => fs.lstatSync(path.join(folder, name)).isDirectory());
-	each(subFolders, (subFolder: string) => {
+	const subFolders: string[] = filter(subfolderNames, (name: string) => fs.lstatSync(path.join(folder, name)).isDirectory());
+	each(subFolders, (subFolder: string): void => {
 		files = addFilesFromFolder(files, path.join(folder, subFolder));
 	});
 
