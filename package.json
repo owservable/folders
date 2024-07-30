@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.96",
+	"version": "0.1.97",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=16"
@@ -59,7 +59,7 @@
 		"tslint-etc": "^1.13.7",
 		"tslint-no-unused-expression-chai": "^0.1.4",
 		"typedoc": "^0.26.5",
-		"typescript": "^5.5.3"
+		"typescript": "^5.5.4"
 	},
 	"pnpm": {
 		"allowedDeprecatedVersions": {
