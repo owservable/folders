@@ -1,9 +1,9 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.97",
+	"version": "0.1.98",
 	"description": "get files and folders",
 	"engines": {
-		"node": ">=16"
+		"node": ">=20"
 	},
 	"main": "./lib/owservable.folders.js",
 	"types": "./lib/owservable.folders.d.ts",
@@ -42,11 +42,11 @@
 	},
 	"devDependencies": {
 		"@danmasta/mocha-sonar": "^1.1.0",
-		"@types/chai": "^4.3.16",
+		"@types/chai": "^4.3.17",
 		"@types/mocha": "^10.0.7",
 		"chai": "4.4.0",
 		"coveralls": "^3.0.9",
-		"mocha": "^10.7.0",
+		"mocha": "^10.7.3",
 		"nyc": "^17.0.0",
 		"prettier": "^3.3.3",
 		"skeletest": "^0.5.2",
