@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.98",
+	"version": "0.1.99",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@danmasta/mocha-sonar": "^1.1.0",
-		"@types/chai": "^4.3.17",
+		"@types/chai": "^4.3.18",
 		"@types/mocha": "^10.0.7",
 		"chai": "4.4.0",
 		"coveralls": "^3.0.9",
@@ -58,7 +58,7 @@
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-etc": "^1.13.7",
 		"tslint-no-unused-expression-chai": "^0.1.4",
-		"typedoc": "^0.26.5",
+		"typedoc": "^0.26.6",
 		"typescript": "^5.5.4"
 	},
 	"pnpm": {
