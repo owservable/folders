@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.1.101",
+	"version": "0.2.0",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@types/lodash": "^4.17.13",
-		"@types/node": "^20.17.6",
+		"@types/node": "^22.9.0",
 		"lodash": "^4.17.20"
 	},
 	"devDependencies": {

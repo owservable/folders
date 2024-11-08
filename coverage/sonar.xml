@@ -14,7 +14,7 @@
     </file>
     <file path="test\owservable.folders.spec.ts">
         <testCase name="owservable.folders tests OwservableFolders" duration="0"/>
-        <testCase name="owservable.folders tests OwservableFolders::addFilesFromFolder:" duration="1"/>
+        <testCase name="owservable.folders tests OwservableFolders::addFilesFromFolder:" duration="0"/>
         <testCase name="owservable.folders tests OwservableFolders::listSubfoldersByName:" duration="0"/>
         <testCase name="owservable.folders tests OwservableFolders::listSubfoldersFilesByFolderName:" duration="0"/>
         <testCase name="owservable.folders tests OwservableFolders::default" duration="0"/>
