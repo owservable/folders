@@ -6,11 +6,11 @@
     </file>
     <file path="test\functions\list.subfolders.by.name.spec.ts">
         <testCase name="list.subfolders.by.name tests listSubfoldersByName exists" duration="0"/>
-        <testCase name="list.subfolders.by.name tests listSubfoldersByName works" duration="3"/>
+        <testCase name="list.subfolders.by.name tests listSubfoldersByName works" duration="1"/>
     </file>
     <file path="test\functions\list.subfolders.files.by.folder.name.spec.ts">
         <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName exists" duration="0"/>
-        <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName works" duration="2"/>
+        <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName works" duration="1"/>
     </file>
     <file path="test\owservable.folders.spec.ts">
         <testCase name="owservable.folders tests OwservableFolders" duration="0"/>
