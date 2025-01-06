@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -36,8 +36,8 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"@types/lodash": "^4.17.13",
-		"@types/node": "^22.10.1",
+		"@types/lodash": "^4.17.14",
+		"@types/node": "^22.10.5",
 		"lodash": "^4.17.20"
 	},
 	"devDependencies": {
@@ -58,7 +58,7 @@
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-etc": "^1.13.7",
 		"tslint-no-unused-expression-chai": "^0.1.4",
-		"typedoc": "^0.27.3",
+		"typedoc": "^0.27.6",
 		"typescript": "^5.7.2"
 	},
 	"pnpm": {
