@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "0.2.4",
+	"version": "0.2.42",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@types/lodash": "^4.17.14",
-		"@types/node": "^22.10.5",
+		"@types/node": "^22.10.7",
 		"lodash": "^4.17.20"
 	},
 	"devDependencies": {
@@ -59,7 +59,7 @@
 		"tslint-etc": "^1.13.7",
 		"tslint-no-unused-expression-chai": "^0.1.4",
 		"typedoc": "^0.27.6",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.3"
 	},
 	"pnpm": {
 		"allowedDeprecatedVersions": {
