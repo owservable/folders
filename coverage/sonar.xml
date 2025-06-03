@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
     <file path="test\functions\add.files.from.folder.spec.ts">
-        <testCase name="add.files.from.folder tests addFilesFromFolder exists" duration="0"/>
+        <testCase name="add.files.from.folder tests addFilesFromFolder exists" duration="1"/>
         <testCase name="add.files.from.folder tests addFilesFromFolder works" duration="1"/>
     </file>
     <file path="test\functions\list.subfolders.by.name.spec.ts">
