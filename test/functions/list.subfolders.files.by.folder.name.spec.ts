@@ -78,10 +78,7 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 			const files = listSubfoldersFilesByFolderName('test', 'special');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(2);
-			expect(files).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special\\a.txt',
-				'test\\_folder\\c\\special\\c.txt'
-			]));
+			expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 		});
 	});
 
@@ -99,7 +96,7 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 
 		it('should return full file paths', () => {
 			const files = listSubfoldersFilesByFolderName('test', 'special');
-			files.forEach(file => {
+			files.forEach((file) => {
 				expect(file).toContain('test');
 				expect(file).toContain('special');
 				expect(file).toContain('.txt');
@@ -112,21 +109,16 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 			const files = listSubfoldersFilesByFolderName('test', 'special');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(2);
-			expect(files).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special\\a.txt',
-				'test\\_folder\\c\\special\\c.txt'
-			]));
+			expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 		});
 
 		it('should handle nested folder structures with files', () => {
 			const files = listSubfoldersFilesByFolderName('test', 'unspecial');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(3);
-			expect(files).toEqual(expect.arrayContaining([
-				'test\\_folder\\b\\unspecial\\another.txt',
-				'test\\_folder\\b\\unspecial\\some.txt',
-				'test\\_folder\\b\\unspecial\\deep\\more.txt'
-			]));
+			expect(files).toEqual(
+				expect.arrayContaining(['test\\_folder\\b\\unspecial\\another.txt', 'test\\_folder\\b\\unspecial\\some.txt', 'test\\_folder\\b\\unspecial\\deep\\more.txt'])
+			);
 		});
 
 		it('should handle folders with no files', () => {
@@ -143,10 +135,7 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 			const files = listSubfoldersFilesByFolderName('test/_folder', 'special');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(2);
-			expect(files).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special\\a.txt',
-				'test\\_folder\\c\\special\\c.txt'
-			]));
+			expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 		});
 
 		it('should handle multiple levels of nesting', () => {

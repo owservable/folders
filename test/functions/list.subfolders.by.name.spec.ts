@@ -78,10 +78,7 @@ describe('list.subfolders.by.name tests', () => {
 			const folders = listSubfoldersByName('test', 'special');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(2);
-			expect(folders).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special',
-				'test\\_folder\\c\\special'
-			]));
+			expect(folders).toEqual(expect.arrayContaining(['test\\_folder\\a\\special', 'test\\_folder\\c\\special']));
 		});
 	});
 
@@ -99,7 +96,7 @@ describe('list.subfolders.by.name tests', () => {
 
 		it('should return full paths', () => {
 			const folders = listSubfoldersByName('test', 'special');
-			folders.forEach(folder => {
+			folders.forEach((folder) => {
 				expect(folder).toContain('test');
 				expect(folder).toContain('special');
 			});
@@ -111,10 +108,7 @@ describe('list.subfolders.by.name tests', () => {
 			const folders = listSubfoldersByName('test/_folder', 'special');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(2);
-			expect(folders).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special',
-				'test\\_folder\\c\\special'
-			]));
+			expect(folders).toEqual(expect.arrayContaining(['test\\_folder\\a\\special', 'test\\_folder\\c\\special']));
 		});
 
 		it('should handle nested folder structures', () => {

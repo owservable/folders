@@ -65,13 +65,15 @@ describe('add.files.from.folder tests', () => {
 			const files = addFilesFromFolder([], 'test/_folder');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(5);
-			expect(files).toEqual(expect.arrayContaining([
-				'test\\_folder\\a\\special\\a.txt',
-				'test\\_folder\\c\\special\\c.txt',
-				'test\\_folder\\b\\unspecial\\another.txt',
-				'test\\_folder\\b\\unspecial\\some.txt',
-				'test\\_folder\\b\\unspecial\\deep\\more.txt'
-			]));
+			expect(files).toEqual(
+				expect.arrayContaining([
+					'test\\_folder\\a\\special\\a.txt',
+					'test\\_folder\\c\\special\\c.txt',
+					'test\\_folder\\b\\unspecial\\another.txt',
+					'test\\_folder\\b\\unspecial\\some.txt',
+					'test\\_folder\\b\\unspecial\\deep\\more.txt'
+				])
+			);
 		});
 
 		it('should handle nested folder structures', () => {
