@@ -708,7 +708,6 @@ Limited inline documentation and examples.
  *   filter: (path, stat) => stat.isFile() && path.endsWith('.ts')
  * });
  * console.log(result); // All TypeScript files in the folder
- * ```
  * 
  * @throws {Error} When the folder doesn't exist or isn't accessible
  * @throws {Error} When a path traversal attempt is detected
