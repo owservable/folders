@@ -3,38 +3,38 @@
   <file path="C:\git\github\owservable\folders\test\functions\list.subfolders.by.name.spec.ts">
     <testCase name="list.subfolders.by.name tests listSubfoldersByName exists" duration="5"/>
     <testCase name="list.subfolders.by.name tests listSubfoldersByName works" duration="1"/>
-    <testCase name="list.subfolders.by.name tests listSubfoldersByName finds all folders with specific name" duration="5"/>
+    <testCase name="list.subfolders.by.name tests listSubfoldersByName finds all folders with specific name" duration="6"/>
     <testCase name="list.subfolders.by.name tests listSubfoldersByName works with case-sensitive names" duration="3"/>
   </file>
   <file path="C:\git\github\owservable\folders\test\functions\add.files.from.folder.spec.ts">
     <testCase name="add.files.from.folder tests addFilesFromFolder exists" duration="4"/>
     <testCase name="add.files.from.folder tests addFilesFromFolder works" duration="0"/>
-    <testCase name="add.files.from.folder tests addFilesFromFolder works without all files" duration="1"/>
-    <testCase name="add.files.from.folder tests addFilesFromFolder works with files already in array" duration="0"/>
-    <testCase name="add.files.from.folder tests addFilesFromFolder handles nested folder structures" duration="2"/>
+    <testCase name="add.files.from.folder tests addFilesFromFolder works without all files" duration="2"/>
+    <testCase name="add.files.from.folder tests addFilesFromFolder works with files already in array" duration="1"/>
+    <testCase name="add.files.from.folder tests addFilesFromFolder handles nested folder structures" duration="1"/>
     <testCase name="add.files.from.folder tests addFilesFromFolder works on complex structure" duration="1"/>
     <testCase name="add.files.from.folder tests addFilesFromFolder returns empty array for empty folder" duration="0"/>
   </file>
   <file path="C:\git\github\owservable\folders\test\functions\list.subfolders.files.by.folder.name.spec.ts">
-    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName exists" duration="3"/>
-    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName works" duration="1"/>
-    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName finds files in specific folder names" duration="6"/>
-    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName handles empty results" duration="1"/>
+    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName exists" duration="4"/>
+    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName works" duration="0"/>
+    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName finds files in specific folder names" duration="5"/>
+    <testCase name="list.subfolders.files.by.folder.name tests listSubfoldersFilesByFolderName handles empty results" duration="2"/>
   </file>
   <file path="C:\git\github\owservable\folders\test\owservable.folders.spec.ts">
-    <testCase name="owservable.folders tests OwservableFolders" duration="8"/>
-    <testCase name="owservable.folders tests OwservableFolders::addFilesFromFolder:" duration="1"/>
+    <testCase name="owservable.folders tests OwservableFolders" duration="4"/>
+    <testCase name="owservable.folders tests OwservableFolders::addFilesFromFolder:" duration="0"/>
     <testCase name="owservable.folders tests OwservableFolders::listSubfoldersByName:" duration="0"/>
-    <testCase name="owservable.folders tests OwservableFolders::listSubfoldersFilesByFolderName:" duration="0"/>
-    <testCase name="owservable.folders tests OwservableFolders::default" duration="1"/>
-    <testCase name="owservable.folders tests Integration tests should work together to find files in specific folder names" duration="3"/>
-    <testCase name="owservable.folders tests Integration tests should return empty array when no folders match the name" duration="1"/>
-    <testCase name="owservable.folders tests Integration tests should handle recursive folder structures" duration="0"/>
+    <testCase name="owservable.folders tests OwservableFolders::listSubfoldersFilesByFolderName:" duration="1"/>
+    <testCase name="owservable.folders tests OwservableFolders::default" duration="0"/>
+    <testCase name="owservable.folders tests Integration tests should work together to find files in specific folder names" duration="4"/>
+    <testCase name="owservable.folders tests Integration tests should return empty array when no folders match the name" duration="2"/>
+    <testCase name="owservable.folders tests Integration tests should handle recursive folder structures" duration="1"/>
     <testCase name="owservable.folders tests Error handling tests addFilesFromFolder should throw error for non-existent folder" duration="2"/>
     <testCase name="owservable.folders tests Error handling tests listSubfoldersByName should throw error for non-existent root folder" duration="0"/>
     <testCase name="owservable.folders tests Error handling tests listSubfoldersFilesByFolderName should handle non-existent root gracefully" duration="1"/>
     <testCase name="owservable.folders tests Edge cases should handle empty folder names" duration="1"/>
     <testCase name="owservable.folders tests Edge cases should handle case-sensitive folder names" duration="1"/>
-    <testCase name="owservable.folders tests Edge cases should handle folders with same name at different levels" duration="1"/>
+    <testCase name="owservable.folders tests Edge cases should handle folders with same name at different levels" duration="2"/>
   </file>
 </testExecutions>
