@@ -14,14 +14,14 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 	});
 
 	it('listSubfoldersFilesByFolderName finds files in specific folder names', async () => {
-		const files = await listSubfoldersFilesByFolderName('test', 'special');
+		const files = listSubfoldersFilesByFolderName('test', 'special');
 		expect(Array.isArray(files)).toBe(true);
 		expect(files).toHaveLength(2);
 		expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 	});
 
 	it('listSubfoldersFilesByFolderName handles empty results', async () => {
-		const files = await listSubfoldersFilesByFolderName('test', 'nonexistent');
+		const files = listSubfoldersFilesByFolderName('test', 'nonexistent');
 		expect(Array.isArray(files)).toBe(true);
 		expect(files).toHaveLength(0);
 	});

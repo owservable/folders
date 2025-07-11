@@ -73,7 +73,7 @@ console.log(subfolders); // Array of matching subfolder paths
 import { listSubfoldersFilesByFolderName } from '@owservable/folders';
 
 // Get all files from subfolders with specific name
-const files = await listSubfoldersFilesByFolderName('/path/to/parent', 'targetFolderName');
+const files = listSubfoldersFilesByFolderName('/path/to/parent', 'targetFolderName');
 
 console.log(files); // Array of file paths from matching subfolders
 ```
