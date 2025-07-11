@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "1.7.5",
+	"version": "1.7.6",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"

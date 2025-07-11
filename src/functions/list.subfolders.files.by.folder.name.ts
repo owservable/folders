@@ -1,24 +1,16 @@
 'use strict';
 
+import {each} from 'lodash';
+
 import addFilesFromFolder from './add.files.from.folder';
 import listSubfoldersByName from './list.subfolders.by.name';
 
-const listSubfoldersFilesByFolderName: Function = async (root: string, name: string): Promise<string[]> => {
+const listSubfoldersFilesByFolderName = (root: string, name: string): string[] => {
 	let files: string[] = [];
-	const folders: string[] = await listSubfoldersByName(root, name);
-
-	// ✅ PERFORMANCE: Process folders in parallel instead of sequentially
-	const results: string[][] = await Promise.all(
-		folders.map(async (folder: string): Promise<string[]> => {
-			const folderFiles: string[] = [];
-			await addFilesFromFolder(folderFiles, folder);
-			return folderFiles;
-		})
-	);
-
-	// ✅ PERFORMANCE: Flatten results using native method
-	files = results.flat();
-
+	const folders: string[] = listSubfoldersByName(root, name);
+	each(folders, (folder: string) => {
+		files = addFilesFromFolder(files, folder);
+	});
 	return files;
 };
 export default listSubfoldersFilesByFolderName;

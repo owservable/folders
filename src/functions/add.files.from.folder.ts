@@ -2,39 +2,21 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import {ItemStat} from '../types/item.stat.interface';
 
-const addFilesFromFolder: Function = async (files: string[], folder: string): Promise<string[]> => {
-	const subfolderNames: string[] = await fs.promises.readdir(folder);
+import {each, filter} from 'lodash';
 
-	// ✅ PERFORMANCE: Single lstat call per item instead of two
-	const itemStats: ItemStat[] = await Promise.all(
-		subfolderNames.map(async (name: string): Promise<ItemStat> => {
-			const fullPath: string = path.join(folder, name);
-			const stat: fs.Stats = await fs.promises.lstat(fullPath);
-			return {
-				name,
-				fullPath,
-				isDirectory: stat.isDirectory()
-			};
-		})
-	);
+const addFilesFromFolder = (files: string[], folder: string): string[] => {
+	const subfolderNames: string[] = fs.readdirSync(folder);
 
-	// ✅ PERFORMANCE: Separate files and folders from single stat check
-	const subFiles: ItemStat[] = itemStats.filter((item: ItemStat): boolean => !item.isDirectory);
-	const subFolders: ItemStat[] = itemStats.filter((item: ItemStat): boolean => item.isDirectory);
-
-	// Add files to array
-	subFiles.forEach((file: ItemStat): void => {
-		files.push(file.fullPath);
+	const subFiles: string[] = filter(subfolderNames, (name: string) => !fs.lstatSync(path.join(folder, name)).isDirectory());
+	each(subFiles, (file: string): void => {
+		files.push(path.join(folder, file));
 	});
 
-	// ✅ PERFORMANCE: Process subfolders in parallel
-	await Promise.all(
-		subFolders.map(async (subFolder: ItemStat): Promise<string[]> => {
-			return await addFilesFromFolder(files, subFolder.fullPath);
-		})
-	);
+	const subFolders: string[] = filter(subfolderNames, (name: string) => fs.lstatSync(path.join(folder, name)).isDirectory());
+	each(subFolders, (subFolder: string): void => {
+		files = addFilesFromFolder(files, path.join(folder, subFolder));
+	});
 
 	return files;
 };
