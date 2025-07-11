@@ -8,19 +8,19 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 		expect(typeof listSubfoldersFilesByFolderName).toBe('function');
 	});
 
-	it('listSubfoldersFilesByFolderName works', async () => {
+	it('listSubfoldersFilesByFolderName works', () => {
 		expect(typeof listSubfoldersFilesByFolderName).toBe('function');
 		expect(listSubfoldersFilesByFolderName.length).toBe(2);
 	});
 
-	it('listSubfoldersFilesByFolderName finds files in specific folder names', async () => {
+	it('listSubfoldersFilesByFolderName finds files in specific folder names', () => {
 		const files = listSubfoldersFilesByFolderName('test', 'special');
 		expect(Array.isArray(files)).toBe(true);
 		expect(files).toHaveLength(2);
 		expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 	});
 
-	it('listSubfoldersFilesByFolderName handles empty results', async () => {
+	it('listSubfoldersFilesByFolderName handles empty results', () => {
 		const files = listSubfoldersFilesByFolderName('test', 'nonexistent');
 		expect(Array.isArray(files)).toBe(true);
 		expect(files).toHaveLength(0);
