@@ -28,22 +28,22 @@ describe('owservable.folders tests', () => {
 	});
 
 	describe('Integration tests', () => {
-		it('should work together to find files in specific folder names', () => {
-			const files = OwservableFolders.listSubfoldersFilesByFolderName('test', 'special');
+		it('should work together to find files in specific folder names', async () => {
+			const files = await OwservableFolders.listSubfoldersFilesByFolderName('test', 'special');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(2);
 			expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
 		});
 
-		it('should return empty array when no folders match the name', () => {
-			const files = OwservableFolders.listSubfoldersFilesByFolderName('test', 'nonexistent');
+		it('should return empty array when no folders match the name', async () => {
+			const files = await OwservableFolders.listSubfoldersFilesByFolderName('test', 'nonexistent');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(0);
 		});
 
-		it('should handle recursive folder structures', () => {
+		it('should handle recursive folder structures', async () => {
 			const files: string[] = [];
-			const result = OwservableFolders.addFilesFromFolder(files, 'test/_folder/b/unspecial');
+			const result = await OwservableFolders.addFilesFromFolder(files, 'test/_folder/b/unspecial');
 			expect(result).toHaveLength(3);
 			expect(result).toEqual(
 				expect.arrayContaining(['test\\_folder\\b\\unspecial\\another.txt', 'test\\_folder\\b\\unspecial\\some.txt', 'test\\_folder\\b\\unspecial\\deep\\more.txt'])
@@ -52,40 +52,40 @@ describe('owservable.folders tests', () => {
 	});
 
 	describe('Error handling tests', () => {
-		it('addFilesFromFolder should throw error for non-existent folder', () => {
-			expect(() => {
-				OwservableFolders.addFilesFromFolder([], 'non/existent/folder');
-			}).toThrow();
+		it('addFilesFromFolder should throw error for non-existent folder', async () => {
+			await expect(async () => {
+				await OwservableFolders.addFilesFromFolder([], 'non/existent/folder');
+			}).rejects.toThrow();
 		});
 
-		it('listSubfoldersByName should throw error for non-existent root folder', () => {
-			expect(() => {
-				OwservableFolders.listSubfoldersByName('non/existent/root', 'any');
-			}).toThrow();
+		it('listSubfoldersByName should throw error for non-existent root folder', async () => {
+			await expect(async () => {
+				await OwservableFolders.listSubfoldersByName('non/existent/root', 'any');
+			}).rejects.toThrow();
 		});
 
-		it('listSubfoldersFilesByFolderName should handle non-existent root gracefully', () => {
-			expect(() => {
-				OwservableFolders.listSubfoldersFilesByFolderName('non/existent/root', 'any');
-			}).toThrow();
+		it('listSubfoldersFilesByFolderName should handle non-existent root gracefully', async () => {
+			await expect(async () => {
+				await OwservableFolders.listSubfoldersFilesByFolderName('non/existent/root', 'any');
+			}).rejects.toThrow();
 		});
 	});
 
 	describe('Edge cases', () => {
-		it('should handle empty folder names', () => {
-			const folders = OwservableFolders.listSubfoldersByName('test', '');
+		it('should handle empty folder names', async () => {
+			const folders = await OwservableFolders.listSubfoldersByName('test', '');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(0);
 		});
 
-		it('should handle case-sensitive folder names', () => {
-			const folders = OwservableFolders.listSubfoldersByName('test', 'Special');
+		it('should handle case-sensitive folder names', async () => {
+			const folders = await OwservableFolders.listSubfoldersByName('test', 'Special');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(0);
 		});
 
-		it('should handle folders with same name at different levels', () => {
-			const folders = OwservableFolders.listSubfoldersByName('test', 'special');
+		it('should handle folders with same name at different levels', async () => {
+			const folders = await OwservableFolders.listSubfoldersByName('test', 'special');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(2);
 			expect(folders).toEqual(expect.arrayContaining(['test\\_folder\\a\\special', 'test\\_folder\\c\\special']));
