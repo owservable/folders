@@ -1,16 +1,18 @@
 'use strict';
 
-import {each} from 'lodash';
-
 import addFilesFromFolder from './add.files.from.folder';
 import listSubfoldersByName from './list.subfolders.by.name';
 
-const listSubfoldersFilesByFolderName = (root: string, name: string): string[] => {
+const listSubfoldersFilesByFolderName: Function = (root: string, name: string): string[] => {
 	let files: string[] = [];
 	const folders: string[] = listSubfoldersByName(root, name);
-	each(folders, (folder: string) => {
+
+	// Process folders using native forEach
+	folders.forEach((folder: string): void => {
 		files = addFilesFromFolder(files, folder);
 	});
+
 	return files;
 };
+
 export default listSubfoldersFilesByFolderName;

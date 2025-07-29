@@ -3,21 +3,37 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import {each, filter} from 'lodash';
+import {ItemStat} from '../interfaces/item.stat.interface';
 
-const addFilesFromFolder = (files: string[], folder: string): string[] => {
+const addFilesFromFolder: Function = (files: string[], folder: string): string[] => {
 	const subfolderNames: string[] = fs.readdirSync(folder);
 
-	const subFiles: string[] = filter(subfolderNames, (name: string) => !fs.lstatSync(path.join(folder, name)).isDirectory());
-	each(subFiles, (file: string): void => {
-		files.push(path.join(folder, file));
+	// PERFORMANCE: Single lstat call per item instead of two
+	const itemStats: ItemStat[] = subfolderNames.map((name: string): ItemStat => {
+		const fullPath: string = path.join(folder, name);
+		const stat: fs.Stats = fs.lstatSync(fullPath);
+		return {
+			name,
+			fullPath,
+			isDirectory: stat.isDirectory()
+		};
 	});
 
-	const subFolders: string[] = filter(subfolderNames, (name: string) => fs.lstatSync(path.join(folder, name)).isDirectory());
-	each(subFolders, (subFolder: string): void => {
-		files = addFilesFromFolder(files, path.join(folder, subFolder));
+	// Separate files and folders using cached stat results
+	const subFiles: ItemStat[] = itemStats.filter((item: ItemStat): boolean => !item.isDirectory);
+	const subFolders: ItemStat[] = itemStats.filter((item: ItemStat): boolean => item.isDirectory);
+
+	// Add files to the array using native forEach
+	subFiles.forEach((file: ItemStat): void => {
+		files.push(file.fullPath);
+	});
+
+	// Process subfolders recursively
+	subFolders.forEach((subFolder: ItemStat): void => {
+		files = addFilesFromFolder(files, subFolder.fullPath);
 	});
 
 	return files;
 };
+
 export default addFilesFromFolder;
