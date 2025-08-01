@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "1.8.0",
+	"version": "1.8.1",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -54,7 +54,7 @@
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-etc": "^1.13.7",
 		"typedoc": "^0.28.8",
-		"typescript": "^5.8.3"
+		"typescript": "^5.9.2"
 	},
 	"pnpm": {
 		"allowedDeprecatedVersions": {
@@ -81,5 +81,5 @@
 		},
 		"neverBuiltDependencies": []
 	},
-	"packageManager": "pnpm@10.13.0"
+	"packageManager": "pnpm@10.14.0"
 }
