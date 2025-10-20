@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "1.9.2",
+	"version": "1.9.3",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -37,7 +37,7 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"@types/node": "^24.7.2"
+		"@types/node": "^24.8.1"
 	},
 	"devDependencies": {
 		"@types/jest": "^30.0.0",
