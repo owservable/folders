@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "1.9.5",
+	"version": "1.9.6",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=20"
@@ -82,5 +82,5 @@
 		},
 		"neverBuiltDependencies": []
 	},
-	"packageManager": "pnpm@10.18.3"
+	"packageManager": "pnpm@10.19.0"
 }
