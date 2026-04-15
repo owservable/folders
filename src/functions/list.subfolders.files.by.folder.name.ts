@@ -3,7 +3,7 @@
 import addFilesFromFolder from './add.files.from.folder';
 import listSubfoldersByName from './list.subfolders.by.name';
 
-const listSubfoldersFilesByFolderName: Function = (root: string, name: string): string[] => {
+const listSubfoldersFilesByFolderName = (root: string, name: string): string[] => {
 	let files: string[] = [];
 	const folders: string[] = listSubfoldersByName(root, name);
 

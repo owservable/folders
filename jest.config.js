@@ -6,9 +6,13 @@ module.exports = {
 	// Test file patterns
 	testMatch: ['**/test/**/*.spec.ts'],
 
-	// TypeScript configuration
 	transform: {
-		'^.+\\.ts$': 'ts-jest'
+		'^.+\\.ts$': [
+			'ts-jest',
+			{
+				tsconfig: 'tsconfig.test.json'
+			}
+		]
 	},
 
 	// Module file extensions

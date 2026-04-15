@@ -1,6 +1,6 @@
 {
 	"name": "@owservable/folders",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"description": "get files and folders",
 	"engines": {
 		"node": ">=22.11.0"
@@ -21,15 +21,14 @@
 		"all": "pnpm i & pnpm dedupe & pnpm audit --fix & pnpm clean & pnpm format & pnpm build & skeletest -f & strictr -f & pnpm test & pnpm docs",
 		"build": "del /S /Q lib\\* && tsc",
 		"build:watch": "tsc --watch",
-		"lint": "tslint -p tsconfig.json",
-		"clean": "tslint --config tslint-imports.json --fix --project .",
+		"lint": "eslint .",
+		"clean": "eslint --fix .",
 		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
 		"sync": "git pull & git fetch origin & git merge origin/main & pnpm i & git branch",
 		"docs": "typedoc --readme none --out docs src/owservable.folders.ts",
 		"test": "jest --coverage --config jest.config.js",
 		"quick": "jest --config jest.config.js",
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-		"sonar": "sonarjs -e .sonarlint/**,node_modules/**,coverage/**,.nyc_output/**",
 		"test_qube": "jest --testResultsProcessor=jest-sonar-reporter",
 		"up": "pnpm up -i",
 		"latest": "pnpm up -i -L",
@@ -38,35 +37,27 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"@types/node": "^25.5.0"
+		"@types/node": "^25.6.0"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.25.1",
 		"@types/jest": "^30.0.0",
 		"coveralls": "^3.0.9",
+		"eslint": "^9.25.1",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-sonarjs": "^4.0.2",
 		"jest": "^30.3.0",
 		"jest-sonar-reporter": "^2.0.0",
-		"prettier": "^3.8.1",
+		"prettier": "^3.8.3",
 		"skeletest": "^0.7.4",
-		"sonarjs": "^1.0.0",
 		"source-map-support": "^0.5.21",
 		"strictr": "^0.5.6",
-		"ts-jest": "^29.4.6",
-		"tslint": "^6.1.3",
-		"tslint-config-prettier": "^1.18.0",
-		"tslint-etc": "^1.13.10",
-		"typedoc": "^0.28.18",
-		"typescript": "^5.9.3"
+		"ts-jest": "^29.4.9",
+		"typedoc": "^0.28.19",
+		"typescript": "^6.0.2",
+		"typescript-eslint": "^8.46.0"
 	},
 	"pnpm": {
-		"allowedDeprecatedVersions": {
-			"tslint": "6.1.3"
-		},
-		"updateConfig": {
-			"ignoreDependencies": [
-				"sonarjs",
-				"tslint"
-			]
-		},
 		"overrides": {
 			"semver@>=6.0.0 <6.3.1": ">=6.3.1",
 			"mem@<4.0.0": ">=4.0.0",
@@ -91,7 +82,10 @@
 			"minimatch@>=10.0.0 <10.2.1": ">=10.2.1",
 			"minimatch@>=10.0.0 <10.2.3": ">=10.2.3",
 			"minimatch@<3.1.4": ">=3.1.4",
-			"ajv@<6.14.0": ">=6.14.0"
+			"ajv@<6.14.0": ">=6.14.0",
+			"brace-expansion@>=2.0.0 <2.0.3": ">=2.0.3",
+			"lodash@>=4.0.0 <=4.17.23": ">=4.18.0",
+			"lodash@<=4.17.23": ">=4.18.0"
 		},
 		"neverBuiltDependencies": []
 	},

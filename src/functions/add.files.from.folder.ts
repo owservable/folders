@@ -5,7 +5,7 @@ import * as path from 'node:path';
 
 import {ItemStat} from '../interfaces/item.stat.interface';
 
-const addFilesFromFolder: Function = (files: string[], folder: string): string[] => {
+const addFilesFromFolder = (files: string[], folder: string): string[] => {
 	const subfolderNames: string[] = fs.readdirSync(folder);
 
 	// PERFORMANCE: Single lstat call per item instead of two

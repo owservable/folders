@@ -5,7 +5,7 @@ import * as path from 'node:path';
 
 import {ItemStat} from '../interfaces/item.stat.interface';
 
-const listSubfoldersByName: Function = (root: string, folderName: string): string[] => {
+const listSubfoldersByName = (root: string, folderName: string): string[] => {
 	let folders: string[] = [];
 
 	const subfolderNames: string[] = fs.readdirSync(root);
