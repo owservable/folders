@@ -3,7 +3,7 @@
 	"version": "2.0.9",
 	"description": "get files and folders",
 	"engines": {
-		"node": ">=22.11.0"
+		"node": ">=24.12.0"
 	},
 	"main": "./lib/owservable.folders.js",
 	"types": "./lib/owservable.folders.d.ts",
