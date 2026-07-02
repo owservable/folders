@@ -10,7 +10,7 @@ describe('list.subfolders.files.by.folder.name tests', () => {
 
 	it('listSubfoldersFilesByFolderName works', () => {
 		expect(typeof listSubfoldersFilesByFolderName).toBe('function');
-		expect(listSubfoldersFilesByFolderName.length).toBe(2);
+		expect(listSubfoldersFilesByFolderName).toHaveLength(2);
 	});
 
 	it('listSubfoldersFilesByFolderName finds files in specific folder names', () => {

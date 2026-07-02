@@ -10,7 +10,7 @@ describe('add.files.from.folder tests', () => {
 
 	it('addFilesFromFolder works', async () => {
 		expect(typeof addFilesFromFolder).toBe('function');
-		expect(addFilesFromFolder.length).toBe(2);
+		expect(addFilesFromFolder).toHaveLength(2);
 	});
 
 	it('addFilesFromFolder works without all files', () => {

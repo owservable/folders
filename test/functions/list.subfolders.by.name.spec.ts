@@ -10,7 +10,7 @@ describe('list.subfolders.by.name tests', (): void => {
 
 	it('listSubfoldersByName works', (): void => {
 		expect(typeof listSubfoldersByName).toBe('function');
-		expect(listSubfoldersByName.length).toBe(2);
+		expect(listSubfoldersByName).toHaveLength(2);
 	});
 
 	it('listSubfoldersByName finds all folders with specific name', (): void => {
