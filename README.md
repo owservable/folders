@@ -2,6 +2,8 @@
 
 # @owservable/folders
 
+[📖 API Docs](https://owservable.github.io/folders/docs/) · [✅ Coverage](https://owservable.github.io/folders/coverage/)
+
 A TypeScript utility library for file system operations, providing functions to work with folders and files recursively.
 
 ## 🚀 Features
