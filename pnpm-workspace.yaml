@@ -2,6 +2,9 @@ allowBuilds:
   es5-ext: true
   unrs-resolver: true
 
+minimumReleaseAgeExclude:
+  - request@2.88.3
+
 overrides:
   'semver@>=6.0.0 <6.3.1': '>=6.3.1'
   'mem@<4.0.0': '>=4.0.0'
