@@ -1,5 +1,6 @@
 'use strict';
 
+import * as path from 'node:path';
 import * as OwservableFolders from '../src/owservable.folders';
 
 describe('owservable.folders tests', () => {
@@ -32,7 +33,7 @@ describe('owservable.folders tests', () => {
 			const files = OwservableFolders.listSubfoldersFilesByFolderName('test', 'special');
 			expect(Array.isArray(files)).toBe(true);
 			expect(files).toHaveLength(2);
-			expect(files).toEqual(expect.arrayContaining(['test\\_folder\\a\\special\\a.txt', 'test\\_folder\\c\\special\\c.txt']));
+			expect(files).toEqual(expect.arrayContaining([path.join('test', '_folder', 'a', 'special', 'a.txt'), path.join('test', '_folder', 'c', 'special', 'c.txt')]));
 		});
 
 		it('should return empty array when no folders match the name', () => {
@@ -46,7 +47,11 @@ describe('owservable.folders tests', () => {
 			const result = OwservableFolders.addFilesFromFolder(files, 'test/_folder/b/unspecial');
 			expect(result).toHaveLength(3);
 			expect(result).toEqual(
-				expect.arrayContaining(['test\\_folder\\b\\unspecial\\another.txt', 'test\\_folder\\b\\unspecial\\some.txt', 'test\\_folder\\b\\unspecial\\deep\\more.txt'])
+				expect.arrayContaining([
+					path.join('test', '_folder', 'b', 'unspecial', 'another.txt'),
+					path.join('test', '_folder', 'b', 'unspecial', 'some.txt'),
+					path.join('test', '_folder', 'b', 'unspecial', 'deep', 'more.txt')
+				])
 			);
 		});
 	});
@@ -68,7 +73,7 @@ describe('owservable.folders tests', () => {
 			const folders = OwservableFolders.listSubfoldersByName('test', 'special');
 			expect(Array.isArray(folders)).toBe(true);
 			expect(folders).toHaveLength(2);
-			expect(folders).toEqual(expect.arrayContaining(['test\\_folder\\a\\special', 'test\\_folder\\c\\special']));
+			expect(folders).toEqual(expect.arrayContaining([path.join('test', '_folder', 'a', 'special'), path.join('test', '_folder', 'c', 'special')]));
 		});
 	});
 });

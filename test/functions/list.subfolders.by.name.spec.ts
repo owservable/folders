@@ -1,5 +1,6 @@
 'use strict';
 
+import * as path from 'node:path';
 import listSubfoldersByName from '../../src/functions/list.subfolders.by.name';
 
 describe('list.subfolders.by.name tests', (): void => {
@@ -26,6 +27,6 @@ describe('list.subfolders.by.name tests', (): void => {
 		const folders = listSubfoldersByName('test', 'unspecial');
 		expect(Array.isArray(folders)).toBe(true);
 		expect(folders).toHaveLength(1);
-		expect(folders[0]).toBe('test\\_folder\\b\\unspecial');
+		expect(folders[0]).toBe(path.join('test', '_folder', 'b', 'unspecial'));
 	});
 });
